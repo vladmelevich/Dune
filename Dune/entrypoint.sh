@@ -18,5 +18,5 @@ if not User.objects.filter(username='admin').exists():
 END
 
 # Запускаем сервер
-exec gunicorn --bind 0.0.0.0:3200 socialnetwork.wsgi:application
+exec gunicorn --bind 0.0.0.0:3200 dune.wsgi:application
 
