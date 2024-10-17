@@ -1,0 +1,209 @@
+.registration_header_text {
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 35.11px;
+    margin-left: 770px;
+    line-height: 11.14px;
+}
+
+.registration_yellow_header_text {
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 35.11px;
+    margin-left: 770px;
+    color: #FFDB3C;
+    line-height: 11.14px;
+}
+
+.registration_window {
+    width: 337.99px;
+    height: 40.7px;
+    margin-left: 770px;
+    border-radius: 10.14px;
+    border: none;
+    margin-top: 8px;
+    background-color: #FFF9F6;
+}
+
+.registration_quation_block {
+    margin-top: 5px;
+    display: flex;
+    margin-left: 770px;
+}
+
+.registration_password_recovery_button {
+    background-color: white;
+    border: white;
+    margin-left: 140px;
+    margin-top: 7px;
+    height: 30px;
+    color: #C2C2C2;
+    font-family: Lato;
+    font-size: 12.67px;
+}
+
+.registration_checkbox_text {
+    color: #C2C2C2;
+    font-family: Lato;
+    font-size: 12.67px;
+}
+
+.registration_button {
+    margin-left: 770px;
+    border-radius: 10.14px;
+    margin-top: 8px;
+    height: 50.7px;
+    width: 337.99px;
+    border: white;
+    background-color: #FFDB3C;
+    color: white;
+}
+
+
+
+.registration_button_profession {
+    margin-left: 770px;
+    margin-top: 30px;
+    border-radius: 10.14px;
+    height: 50.7px;
+    width: 337.99px;
+    border: white;
+    background-color: #FFDB3C;
+    color: white;
+}
+
+.profession_block {
+    margin-top: 5px;
+}
+
+.prefession_change_button {
+    display: flex;
+    margin-left: 770px;
+    height: 40px;
+}
+
+.second_position {
+    margin-left: 180px;
+}
+
+.profession_change_text {
+    font-size: 14px;
+    color: #C2C2C2;
+    font-family: Roboto;
+    line-height: 15.21px;
+}
+
+.signing_quation_button_text {
+font-family: Lato;
+font-size: 12.67px;
+color: #C2C2C2;
+}
+
+.signing_quation_button {
+    font-size: 12.67px;
+    color: #FFDB3C;
+    background-color: white;
+    font-family: Lato;
+    line-height: 15.21px;
+    border: none;
+}
+
+.signing_button_quation_flex {
+    display: flex;
+    gap: 5px;
+    margin-left: 860px;
+}
+
+.coin5 {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.registration_error {
+    border: none;
+    background-color: #f1a3a3;
+    border-radius: 6px;
+    margin-left: 770px;
+    height: 50px;
+    width: 337.99px;
+
+}
+
+.text_in_border_registration {
+    position: absolute;
+    margin-top: 10px;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 18px;
+    color: #c91616;
+    margin-left: 15px;
+    line-height: 20px;
+}
+
+.register_yellow_background {
+    height: 351px;
+    width: 301px;
+    position: absolute;
+    z-index: -2;
+margin-left: 1610px;
+}
+
+.register_yellow_background2 {
+    position: absolute;
+    z-index: -2;
+    height: 271px;
+    width: 551px;
+    margin-top: 100px;
+    margin-left: -1650px;
+}
+
+.register_yellow_background3 {
+    position: absolute;
+    z-index: -2;
+    height: 251px;
+    width: 351px;
+    margin-top: -20px;
+    margin-left: -1650px;
+}
+
+.reg-coin1 {
+    margin-top: 38.02px;
+    margin-left: 374.48px;
+    transform: rotate(250deg);
+}
+
+.reg-coin2 {
+    margin-left: 878px;
+    transform: rotate(355deg);
+}
+
+.reg-coin3 {
+    margin-left: 390.11px;
+    transform: rotate(-179.7deg);
+    }
+
+    .reg-coin4 {
+    margin-left: 954px;
+    transform: rotate(-308.62deg);
+    }
+
+    .sign-coin1 {
+        margin-top: 138.02px;
+        margin-left: 404.48px;
+        transform: rotate(250deg);
+    }
+
+    .sign-coin2 {
+        margin-left: 908px;
+        transform: rotate(355deg);
+    }
+
+    .sign-coin3 {
+        margin-left: 390.11px;
+        transform: rotate(-179.7deg);
+        }
+
+        .sign-coin4 {
+        margin-left: 954px;
+        transform: rotate(-308.62deg);
+        }

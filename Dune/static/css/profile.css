@@ -1,0 +1,385 @@
+.default_data_text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18.23px;
+    color: #A29EB6;
+}
+
+.profile_text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 87px;
+}
+
+.default_data_text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15.8px;
+    color: #A29EB6;
+    margin-left: 5px;
+}
+
+.black_profile_text_status {
+    color: black;
+    font-size: 18.23px;
+    margin-left: 5px;
+}
+
+.yellow_profile_text_status {
+    color: #FFDB3C;
+    font-size: 18.23px;
+    margin-left: 5px;
+}
+
+.referal_main_text {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.referal_block {
+    margin-top: 80px;
+}
+
+.referal_content_text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18.23px;
+    color: #A29EB6;
+}
+
+.referal_link_copy_button {
+    width: 274.64px;
+    height: 55.9px;
+    background-color: #FFDB3C;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 18.23px;
+    border-radius: 11.23px;
+    border: none;
+    margin-top: 30px;
+}
+
+.admin_panel_text {
+font-family: Roboto;
+font-weight: 600;
+font-size: 24px;
+}
+
+.admin_panel_button {
+    text-align: left;
+    width: 683px;
+    height: 137px;
+    border-radius: 34.33px;
+    border: none;
+    box-shadow: 0px 1.81px 14.46px 0px #00000014;
+    background-color: white;
+}
+
+.button_arrow {
+    margin-left: 350px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.admin_panel_info_text {
+    font-family: Roboto;
+    font-family: 500;
+    font-size: 18px;
+    color: #A29EB6;
+}
+
+.mark_tick_admin_panel {
+rotate: -90deg;
+}
+
+.admin_panel_change_type {
+    width: 420.57px;
+    height: 55.91px;
+    text-align: left;
+    border: none;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 21.3px;
+    background-color: white;
+}
+
+.admin_panel_display_flex{
+    display: flex;
+}
+
+.commands_block {
+    margin-top: 130px;
+}
+
+.display_flex_profile_blocks {
+    display: flex;
+    width: 1400px;
+    height: 669.55px;
+    margin-top: 30px;
+    gap: 65px;
+}
+
+.left_profile_block {
+    margin-top: 40px;
+    width: 1500px;
+    height: 855.55px;
+    overflow-y: scroll;
+   box-shadow: 0px 1.21px 9.72px 0px #00000014;
+}
+
+.post_block_display_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+   grid-auto-flow: row;
+   gap: 40px;
+}
+
+.pair_block {
+    width: 459px;
+    max-height: 1090px;
+}
+
+
+.profile_info_text {
+    font-family: Lato;
+font-size: 18.22px;
+font-weight: 700;
+line-height: 21.87px;
+color: #FFD000;
+margin-left: 6px;
+}
+
+.profile_info_display_flex {
+    display: flex;
+}
+
+.profile_img_type1 {
+    margin-left: 15px;
+}
+
+.profile_img_type2 {
+    margin-left: 70px;
+}
+
+.bloger_registration_status {
+    font-family: Lato;
+font-size: 18.22px;
+font-weight: 700;
+line-height: 21.87px;
+color: #CBFF8B;
+margin-left: 15px;
+}
+
+.bloger_costs {
+    font-family: Lato;
+font-size: 14.58px;
+font-weight: 700;
+line-height: 17.49px;
+color:#A29EB6;
+margin-left: 9px;
+}
+
+.change_cost_button {
+    width: 346.78px;
+height: 56.13px;
+gap: 0px;
+border-radius: 11.23px;
+opacity: 0px;
+border: none;
+background-color: #FFDB3C;
+color: white;
+}
+
+.paying_status {
+    font-family: Lato;
+font-size: 14.58px;
+font-weight: 700;
+line-height: 17.49px;
+color: #A29EB6;
+margin-left: 30px;
+margin-top: -10px;
+}
+
+.verification_status {
+    font-family: Lato;
+font-size: 18.22px;
+font-weight: 700;
+line-height: 21.87px;
+color: #CBFF8B;
+margin-left: 30px;
+margin-top: -2px;
+}
+
+.style_fix2 {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.profile_logo_bloger {
+    border: none;
+    background-color: none;
+    width: 96px;
+    height: 96px;
+}
+
+.style_fix3 {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.social_text_bloggers2 {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 14.58px;
+    line-height: 17.49px;
+    color: #A29EB6;
+}
+
+.display_flex_status_bloggers2 {
+    display: flex;
+    gap: 69px;
+    margin-top: -15px;
+    margin-left: 33px;
+}
+
+.Yellow_projects_text2 {
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 20.4px;
+    font-size: 17px;
+    color: #FFDB3C;
+    margin-left: 12px;
+}
+
+.Yellow_projects_text3 {
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 20.4px;
+    font-size: 17px;
+    color: #FFDB3C;
+    margin-left: -8px
+}
+
+.left_profile_block_box_shadows {
+    box-shadow: 0px 1.21px 9.72px 0px #00000014;
+    border-radius: 23.08px;
+    height: 499px;
+}
+
+    .left_profile_block_box_shadows2 {
+        box-shadow: 0px 1.21px 9.72px 0px #00000014;
+        border-radius: 23.08px;
+        height: 92.32px;
+        margin-top: 20px;
+    }
+
+.addition_text_bloger_profile {
+    font-family: Lato;
+font-size: 19.44px;
+font-weight: 700;
+line-height: 23.32px;
+}
+
+.diplay_grid_statistics_block {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+   grid-auto-flow: row;
+   width: 200px;
+   gap: 40px;
+}
+
+.statistics_underblock {
+    width: 209.54px;
+height: 83.82px;
+border-radius: 20.95px;
+box-shadow: 0px 1.1px 8.82px 0px #00000014;
+}
+
+.statistics_underblock2 {
+    width: 209.54px;
+    height: 83.82px;
+    border-radius: 20.95px;
+    box-shadow: 0px 1.1px 8.82px 0px #00000014;
+    margin-left: -240px;
+}
+.type_of_stat {
+    font-family: Lato;
+font-size: 14.58px;
+font-weight: 700;
+line-height: 17.49px;
+color: #A29EB6;
+margin-left: 80px;
+}
+
+.count_of_stat {
+    font-family: Lato;
+font-size: 19.44px;
+font-weight: 700;
+line-height: 23.32px;
+color: #FFD000;
+margin-left: 90px;
+}
+
+.pass_generation_block {
+    border: #FFD000, 2px, solid;
+    height: 214px;
+    width: 368px;
+    margin-top: 190px;
+    border-radius: 19px;
+}
+
+.pass_text {
+    font-weight: 600px;
+    font-family: Roboto;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.pass_buttons {
+    border-radius: 16px;
+    border: none;
+    width: 318px;
+    height: 42px;
+    margin-top: 20px;
+    margin-left: 25px;
+    background-color: #FFDB3C;
+    font-weight: 600px;
+    font-family: Roboto;
+    font-size: 18px;
+    color: white;
+}
+
+.update {
+    font-weight: 600px;
+    font-family: Roboto;
+    font-size: 16px;
+    margin-left: 80px;
+}
+
+.div_update {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: -100px;
+    width: 310px;
+    height: 50px;
+    border: none;
+    border-radius: 16px;
+    background-color: #A29EB6;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.div_update.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.post_block {
+    margin-left: 60px;
+}

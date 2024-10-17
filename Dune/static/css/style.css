@@ -1,0 +1,146 @@
+.coin1 {
+    margin-top: 178.02px;
+    margin-left: 404.48px;
+    transform: rotate(250deg);
+}
+
+.coin2 {
+    margin-left: 908px;
+    transform: rotate(355deg);
+}
+
+.main_page_name_text {
+    font-family: DUNE;
+    font-weight: 400;
+    font-size: 94.58px;
+    margin-left: 681.46px;
+    line-height: 33.93px;
+    letter-spacing: 32.62px;
+}
+
+.main_page_text1 {
+    margin-left: 731.46px;
+    font-weight: 400;
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 5px;
+}
+
+.main_page_text2 {
+    line-height: 5px;
+    margin-left: 761.46px;
+    font-weight: 400;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: italic;
+    color: #FBCD02;
+
+}
+
+.main_page_buttons_block {
+    margin-left: 836px;
+    width: 167px;
+}
+
+
+.main_page_img {
+    margin-top: 12px;
+}
+
+.d_fix {
+    position: absolute;
+    z-index: 1;
+    margin-top:-30px;
+    margin-left: 690px;
+}
+
+.e_fix {
+    position: absolute;
+    z-index: 1;
+    margin-top: 4px;
+    margin-left: 1078px;
+}
+
+.main_page_img1 {
+    margin-top: 18px;
+}
+
+.coin3 {
+margin-left: 390.11px;
+transform: rotate(-179.7deg);
+}
+
+.coin4 {
+margin-left: 954px;
+transform: rotate(-308.62deg);
+}
+
+.main_page_button_registation {
+width: 167px;
+height: 52px;
+border: none;
+background-color: white;
+}
+
+.main_page_button_sighing {
+width: 167px;
+height: 52px;
+margin-top: 20px;
+border-radius: 10px;
+border: none;
+background-color: #FFDB3C;
+}
+
+.main_page_button1_text {
+color: white;
+font-family: Roboto;
+font-weight: 900;
+font-size: 16px;
+line-height: 15.23px;
+}
+
+.main_page_button2_text {
+color: #FFDB3C;
+font-family: Roboto;
+font-weight: 900;
+font-size: 16px;
+line-height: 15.23px;
+}
+
+.coin5 {
+    position: absolute;
+    z-index: -3;
+    margin-top: 120px;
+
+}
+
+.e_fix_2 {
+    position: absolute;
+    z-index: 0;
+    margin-top: 0px;
+    margin-left: 1110px;
+}
+
+.main_page_yellow_background {
+position: absolute;
+z-index: -2;
+width: 551px;
+height: 551px;
+margin-left: -150px;
+margin-top: -150px;
+}
+
+.main_page_yellow_background2 {
+max-width: 351px;
+height: 201px;
+max-height: 301px;
+position: absolute;
+z-index: 1;
+margin-top: 56px;
+margin-left: 110px;
+}
+
+.main_page_container {
+    max-width: 1920px;
+    max-height: 1060px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <title>DUNE</title>
+</head>
+<body class="main_page_container">
+    <div>
+        <img src="{% static 'image/Ellipse 126.png'%}" alt="50" class="main_page_yellow_background">
+    <img src="{% static 'image/coin.png'%}" alt="1" class="coin1">
+    <img src="{% static 'image/coin.png'%}" alt="2" class="coin2">
+</div>
+
+    <div>
+        <img src="{% static 'image/d_fix.png'%}" alt="5" class="d_fix">
+    <img src="{% static 'image/e_fix.png'%}" alt="6" class="e_fix">
+    <img src="{% static 'image/Ellipse 135.png'%}" alt="51" class="e_fix_2">
+    <p class="main_page_name_text">DUNE</p>
+    <p class="main_page_text1">ЗАРАБАТЫВАЙ НА СВОИХ</p>
+    <p class="main_page_text2">СОЦИАЛЬНЫХ СЕТЯХ</p>
+</div>
+
+<div class="main_page_buttons_block">
+    <button class="main_page_button_sighing" onclick="location.href='{% url 'auth'%}'"><p class="main_page_button1_text">Войти</p></button><br>
+    <button class="main_page_button_registation" onclick="location.href='{% url 'prof'%}'"><p class="main_page_button2_text">Зарегистрироватся</p></button>
+</div>
+
+<div>
+    <img src="{% static 'image/coin.png'%}" alt="7" class="coin3">
+    <img src="{% static 'image/coin.png'%}" alt="8" class="coin4">
+    <img src="{% static 'image/but.svg'%}" alt="52" class="coin5">
+    <img src="{% static 'image/Ellipse 126.png'%}" alt="49" class="main_page_yellow_background2">
+</div>
+</body>
+</html>

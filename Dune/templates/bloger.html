@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>DUNE</title>
+</head>
+<body>
+<div class="flex_block_projects">
+    <div class="left_block_projects">
+        <div class="projects_main_logo">
+            <h1 class="projects_text">DUNE</h1>
+            <img src="{% static 'image/d_fix_projects.svg' %}" class="d_fix_projects">
+            <img src="{% static 'image/e_fix_projects_svg.svg' %}" class="e_fix_projects">
+            <img src="{% static 'image/e_fix_white_phone.png' %}" class="e_fix_projects_white">
+        </div>
+<div class="button_block_projects">
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'blogers'%}'"><img src="{% static 'image/yellow_bloggers.png' %}"><p class="projects_classic_button_text_yellow">Блогеры</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'projects'%}'"><img src="{% static 'image/grey_projects.png' %}"><p class="projects_classic_button_text">Проекты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'post'%}'"><img src="{% static 'image/Posts.png'%}"><p class="projects_classic_button_text">Посты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'result_blog'%}'"><img src="{% static 'image/statistics.png' %}"><p class="projects_classic_button_text">Результаты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'applic_b'%}'"><img src="{% static 'image/Applications.svg' %}"><p class="projects_classic_button_text">Заявки</p></button>
+</div>
+
+<div>
+    <button class="profile" onclick="location.href='{%url 'profile'%}'"><p class="nickname">Информация о профиле</p></button>
+</div>
+    </div>
+    <div class="right_block_projects">
+        <div class="search_projects_block">
+            <img src="{% static 'image/search.svg' %}">
+            <form method="post">
+            <input type="text" placeholder="Поиск" class="input_search" name="poisk">
+                </form>
+            <img src="{% static 'image/filters.svg' %}" class="img_searh_block_filters">
+        </div>
+        <div class="filters_block_text">
+            <p class="filters_block_text_msg">Фильтрация</p>
+            <p class="filters_block_text_msg">Всего найдено:</p>
+        </div>
+        <div class="filters_block_buttons">
+            <button class="button_of_filters"><p>Соцсеть </p><img src="{% static 'image/gap.svg' %}" class="filters_button_gap_svg"></button>
+            <button class="button_of_filters"><p>Тип </p><img src="{% static 'image/gap.svg' %}" class="filters_button_gap_svg"></button>
+        </div>
+
+        <div class="overflow_block_bloggers">
+            <div class="grid_block_bloggers">
+                {%for us_bl in blog_us%}
+                <div class="prewiew_project_block">
+                    <div class="display_flex_profile_prewiew">
+                        <button class="profile_prewiew_button" onclick="location.href='{%url 'bloger_info' us_bl.id%}'"><img src="{{us_bl.photo_file.url}}" class="project_logo"></button>
+                        <div class="status_block">
+                            <p class="id">id: {{us_bl.id}}</p>
+                            <p class="project_block_nickname">{{us_bl.name_firs}}</p>
+                        </div>
+                    </div>
+                    <div class="display_flex_social_text_bloggers">
+                        <p class="social_text_bloggers">Подписчики</p>
+                    </div>
+                    <div class="display_flex_status_bloggers">
+                        <p class="Yellow_projects_text">{{us_bl.subs}}</p>
+                    </div>
+                     <p class="social_network_blogers">Соцсеть:</p>
+                        {%if us_bl.social_net == 'Instagram'%}
+                                <img src="{% static 'image/social_logo.svg'%}" class="social_network_logo">
+                        {%elif us_bl.social_net == 'Telegram'%}
+                            <img src="{% static 'image/telegram.svg'%}" class="social_network_logo">
+                        {%elif us_bl.social_net == 'VK'%}
+                            <img src="{% static 'image/vk.svg'%}" class="social_network_logo">
+                        {%elif us_bl.social_net == 'Youtube'%}
+                            <img src="{% static 'image/youtube.svg'%}" class="social_network_logo">
+                        {%endif%}
+                    <p class="bloggers_theme">Тематика: <span class="type_of_theme">{{us_bl.tem}}</span></p>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div class="modal_add" id="add-modal-block-blogers">
+            <div class="modal_box">
+                    <button class="esc" id="close-add-blogers"><img src="{% static 'image/cross.svg' %}"></button>
+                    <p class="addition_text">Добавление нового <span class="yellow_span">блогера</span></p>
+                    <div class="overflow_block_of_modal_box">
+                        <form method="post" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            <div class="display_flex_modal_block_add_photo">
+                                <img src="{% static 'image/Project logo.png' %}">
+                                <input type="file" id="input_photo" multiple name="photo">
+                                <label for="input_photo" class="input_photo_button"><span class="span_modal_button">Добавить <span class="yellow_span">фото</span></span></label>
+                            </div>
+                              <input type="text" name="nickname" placeholder="Введите имя и фамилию" class="input_project_name">
+                              <input type="tel" name="telephone" placeholder="Введите номер телефона" class="input_project_name">
+                              <input type="email" name="em" placeholder="Введите вашу почту" class="input_project_name">
+                              <div class="display_flex_input_types">
+                                <div class="socials_input">
+                                <p class="type_modal_text">Ваши <span class="yellow_span">соцсети</span></p>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="Instagram"><span class="Span_label">Instagram</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="VK"><span class="Span_label">VK</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="OK"><span class="Span_label">OK</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="Telegram"><span class="Span_label">Telegram</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="Likee"><span class="Span_label">Likee</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="Tiktok"><span class="Span_label">Tiktok</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="Youtube"><span class="Span_label">Youtube</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" name="categor" value="Twitch"><span class="Span_label">Twitch</span></label>
+                                </div>
+                                  <div class="socials_input">
+                                    <p class="type_modal_text">Ваше количество<br><span class="yellow_span">подписчиков</span></p>
+                                    <label><input type="radio" class="checkbox_type" name="subs" value="50-100"><span class="Span_label">50-100</span></label>
+                                    <br>
+                                    <label><input type="radio" class="checkbox_type" name="subs" value="100-500"><span class="Span_label">100-500</span></label>
+                                    <br>
+                                    <label><input type="radio" class="checkbox_type" name="subs" value="500-1000"><span class="Span_label">500-1000</span></label>
+                                    <br>
+                                    <label><input type="radio" class="checkbox_type" name="subs" value="1000-5000"><span class="Span_label">1000-5000</span></label>
+                                    <br>
+                                    <label class="label_fix"><input type="radio" class="checkbox_type" name="subs" value="5000-10000"><span class="Span_label">5000-10000</span></label>
+                                    <br>
+                                    <label><input type="radio" class="checkbox_type" name="subs" value="10000+"><span class="Span_label">10000+</span></label>
+                                </div>
+                              </div>
+                              <div>
+                              <p class="Status_in_modal_block_bloggers">Оплата за проект</p>
+                              <input type="number" name="summ" placeholder="Введите оплату за проект" class="input_project_name">
+                              <p class="Status_in_modal_block_bloggers2">Тематика</p>
+                              <div class="socials_input_theme">
+                                <label><input type="radio" class="checkbox_type" value="Авто, мото" name="tem"><span class="Span_label">Авто, мото</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Бизнес и финансы" name="tem"><span class="Span_label">Бизнес и финансы</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Дом, ремонт" name="tem"><span class="Span_label">Дом, ремонт</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Животные и питомцы" name="tem"><span class="Span_label">Животные и питомцы</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Компьютер, интернет" name="tem"><span class="Span_label">Компьютер, интернет</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Здоровье и медицина" name="tem"><span class="Span_label">Здоровье и медицина</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Кулинария, фудблоги" name="tem"><span class="Span_label">Кулинария, фудблоги</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Лайфстайл" name="tem"><span class="Span_label">Лайфстайл</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Новости" name="tem"><span class="Span_label">Новости</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Образование и наука" name="tem"><span class="Span_label">Образование и наука</span></label>
+                                <br>
+                                <label><input type="radio" class="checkbox_type" value="Иное" name="tem"><span class="Span_label">Иное</span></label>
+                                </div>
+                            </div>
+                            <button class="button_submit" type="submit" id="commit-add-blogers">Подтвердить</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+        <button class="add_svg_button" id="open-add-blogers"><img src="{% static 'image/big_plus.svg'%}"></button>
+    </div>
+</div>
+<script src="{% static 'js/scripts.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@import url("style.css");
+@import url("reg.css");
+@import url("project.css");
+@import url("profile.css");
+
+@font-face {
+    font-family: "DUNE";
+    src: url("../fonts/Dune_Rise.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+     }
+
+     @font-face {
+        font-family: "Inter";
+        src: url("../fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+         }
+
+         @font-face {
+            font-family: "Roboto";
+            src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+             }
+
+             @font-face {
+               font-family: "Lato";
+               src: url("../fonts/Lato-Regular.ttf") format("truetype");
+               font-style: normal;
+               font-weight: normal;
+                }
