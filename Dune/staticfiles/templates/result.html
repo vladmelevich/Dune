@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <title>DUNE</title>
+</head>
+<body>
+<div class="flex_block_projects">
+    <div class="left_block_projects">
+        <div class="projects_main_logo">
+            <h1 class="projects_text">DUNE</h1>
+            <img src="{% static 'image/d_fix_projects.svg'%}" class="d_fix_projects">
+            <img src="{% static 'image/e_fix_projects_svg.svg'%}" class="e_fix_projects">
+            <img src="{% static 'image/e_fix_white_phone.png'%}" class="e_fix_projects_white">
+        </div>
+<div class="button_block_projects">
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'blogers_m'%}'"><img src="{% static 'image/blogers.png'%}"><p class="projects_classic_button_text">Блогеры</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'projects_m'%}'"><img src="{% static 'image/grey_projects.png'%}"><p class="projects_classic_button_text">Проекты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'post_m'%}'"><img src="{% static 'image/Posts.png'%}"><p class="projects_classic_button_text">Посты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'result'%}'"><img src="{% static 'image/yellow_results.png'%}"><p class="projects_classic_button_text_yellow">Результаты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'applic_m'%}'"><img src="{% static 'image/Applications.svg' %}"><p class="projects_classic_button_text">Заявки</p></button>
+</div>
+
+<div>
+    <button class="profile" onclick="location.href='{%url 'profile_manager'%}'"><p class="nickname">Информация о профиле</p></button>
+</div>
+    </div>
+    <div class="right_block_projects">
+        <div class="search_projects_block">
+            <img src="{% static 'image/search.svg'%}" alt="Поиск">
+            <input type="text" placeholder="Поиск" class="input_search">
+            <img src="{% static 'image/filters.svg'%}" class="img_searh_block_filters" alt="Фильтры">
+        </div>
+        <div class="pair_block">
+            <div class="filters_block_text">
+                <p class="filters_block_text_msg">Фильтрация</p>
+            </div>
+            <div class="filters_block_buttons">
+                <button class="button_of_filters"><p>Соцсеть</p><img src="{% static 'image/gap.svg'%}" class="filters_button_gap_svg" alt="Разделитель"></button>
+                <button class="button_of_filters"><p>Тип</p><img src="{% static 'image/gap.svg'%}" class="filters_button_gap_svg" alt="Разделитель"></button>
+            </div>
+            <div class="incoming_stat">
+                <p class="rub_counter">0<img src="{% static 'image/rub.png'%}" alt="Рубли"></p>
+                <p class="ff_text">Вы заработали за <br>последнюю неделю</p>
+            </div>
+            <div class="display_flex_of_stat_text">
+                <p class="stat_of_stat_text">Статистика</p>
+                <p class="time_of_stat">За последний: <span class="yellow_span">Месяц</span></p>
+            </div>
+            <div>
+                <div class="display_flex_part_of_text">
+                    <p class="fff_text">Проект</p>
+                    <p class="fff_text">Время</p>
+                </div>
+                <div class="stat_boxes_of_shadows">
+                    {%for stat in res_b%}
+                    <div class="display_flex_stat_blocks">
+                        <div class="display_flex_profile_prewiew">
+                            <button class="profile_prewiew_button" onclick="location.href='project_info.html'">
+                                <img src="{{stat.projects_post.pr.photo.url}}" class="project_logo" alt="Логотип проекта">
+                            </button>
+                            <div class="status_block">
+                                <p class="id">id: {{stat.id}}</p>
+                                <p class="project_block_nickname">{{stat.projects_post.pr.name}}</p>
+                                <p class="date">{{stat.projects_post.pr.date_start}}</p>
+                                <p class="date">{{stat.projects_post.pr.date_finish}}</p>
+                            </div>
+                        </div>
+                        <p class="date_of_stats">{{stat.data_konec}}</p>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

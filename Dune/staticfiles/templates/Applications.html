@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>DUNE</title>
+</head>
+<body>
+<div class="flex_block_projects">
+    <div class="left_block_projects">
+        <div class="projects_main_logo">
+            <h1 class="projects_text">DUNE</h1>
+            <img src="{% static 'image/d_fix_projects.svg'%}" class="d_fix_projects">
+            <img src="{% static 'image/e_fix_projects_svg.svg'%}" class="e_fix_projects">
+            <img src="{% static 'image/e_fix_white_phone.png'%}" class="e_fix_projects_white">
+        </div>
+        <div class="button_block_projects">
+            <button class="button_on_projects_classic" onclick="location.href='{% url 'blogers_m'%}'"><img src="{% static 'image/blogers.png'%}"><p class="projects_classic_button_text">Блогеры</p></button>
+            <button class="button_on_projects_classic" onclick="location.href='{% url 'projects_m'%}'"><img src="{% static 'image/grey_projects.png'%}"><p class="projects_classic_button_text">Проекты</p></button>
+            <button class="button_on_projects_classic" onclick="location.href='{% url 'post_m'%}'"><img src="{% static 'image/Posts.png' %}"><p class="projects_classic_button_text">Посты</p></button>
+            <button class="button_on_projects_classic" onclick="location.href='{% url 'result'%}'"><img src="{% static 'image/statistics.png' %}"><p class="projects_classic_button_text">Результаты</p></button>
+            <button class="button_on_projects_classic" onclick="location.href='{% url 'applic'%}'"><img src="{% static 'image/Applications.svg' %}"><p class="projects_classic_button_text">Заявки</p></button>
+        </div>
+        <div>
+            <button class="profile" onclick="location.href='{%url 'profile_manager'%}'"><p class="nickname">Информация о профиле</p></button>
+        </div>
+    </div>
+
+    <div class="right_block_projects">
+        <div class="overflow_block_applications">
+            <div class="grid_block_bloggers">
+                {%for a in aplicat%}
+                <form method="post">
+                    {%csrf_token%}
+                <div class="prewiew_application_block">
+                    <p class="Applications_projects_text">Проект</p>
+                    <div class="display_flex_profile_prewiew">
+                        <button class="profile_prewiew_button"><img src="{{a.pr.photo.url}}" class="project_logo"></button>
+                        <div class="status_block">
+                            <p class="id">id: {{a.pr.id}}</p>
+                            <p class="project_block_nickname">{{a.pr.name}}</p>
+                            <p class="date">{{a.pr.date_start}}</p>
+                            <p class="date">{{a.pr.date_finish}}</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        {%for blog in a.blog.all%}
+                        <p class="blogers_in_application_text">О блогере</p>
+                        <div class="display_flex_profile_prewiew">
+                            <button class="profile_prewiew_button" ><img src="{{blog.photo_file.url}}" class="project_logo"></button>
+                            <div class="status_block">
+                                <p class="id">id: {{block.id}}</p>
+                                <p class="project_block_nickname">{{blog.name_first}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="classic_info_text1">Соцсети:
+                            {%if blog.social_net == 'Instagram'%}
+                                <img src="{% static 'image/social_logo.svg'%}" class="social_network_logo">
+                            {%elif blog.social_net == 'Telegram'%}
+                                <img src="{% static 'image/telegram.svg'%}" class="social_network_logo">
+                            {%elif blog.social_net == 'VK'%}
+                                <img src="{% static 'image/vk.svg'%}" class="social_network_logo">
+                            {%elif blog.social_net == 'Youtube'%}
+                                <img src="{% static 'image/youtube.svg'%}" class="social_network_logo">
+                            {%endif%}
+                        <p class="classic_info_text1">Оплата: <span class="info_text">{{blog.num}}</span></p>
+                        {%endfor%}
+                    </div>
+                    {%if a.applicat == 'Отправлено'%}
+                        <input type="radio" name="status" value="Принята"><p>Принять заявку</p>
+                    <input type="radio" name="status" value="Отклонено"><p>Отклонить заявку</p>
+                        <button type="submit" class="button_status" name="id_a" value="{{a.id}}">отправить</button>
+                    {%elif a.applicat == 'Принята'%}
+                        <button class="button_status">Принято </button>
+                    {%elif a.applicat == 'Отклонено'%}
+                        <button class="button_cancel_application">Отклонено </button>
+                    {%endif%}
+                </div>
+                {%endfor%}
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

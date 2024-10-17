@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>DUNE</title>
+</head>
+<body>
+<div class="flex_block_projects">
+    <div class="left_block_projects">
+        <div class="projects_main_logo">
+            <h1 class="projects_text">DUNE</h1>
+            <img src="{% static 'image/d_fix_projects.svg' %}" class="d_fix_projects">
+            <img src="{% static 'image/e_fix_projects_svg.svg' %}" class="e_fix_projects">
+            <img src="{% static 'image/e_fix_white_phone.png' %}" class="e_fix_projects_white">
+        </div>
+<div class="button_block_projects">
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'blogers'%}'"><img src="{% static 'image/blogers.png' %}"><p class="projects_classic_button_text">Блогеры</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'projects'%}'"><img src="{% static 'image/grey_projects.png' %}"><p class="projects_classic_button_text">Проекты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'post'%}'"><img src="{% static 'image/yellow_posts.png'%}"><p class="projects_classic_button_text_yellow">Посты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'result_blog'%}'"><img src="{% static 'image/statistics.png' %}"><p class="projects_classic_button_text">Результаты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'applic_b'%}'"><img src="{% static 'image/Applications.svg' %}"><p class="projects_classic_button_text">Заявки</p></button>
+</div>
+
+<div>
+    <button class="profile" onclick="location.href='{%url 'profile'%}'"><p class="nickname">Информация о профиле</p></button>
+</div>
+    </div>
+
+
+
+    <div class="right_block_projects2">
+        <div class="display_flex_profile_blocks">
+<div class="left_profile_block">
+    <div class="post_block_display_grid">
+        <div class="post_block">
+        <div class="box_shadows_in_status_block">
+            <div class="style_fix7">
+                {%for ip in p%}
+        <div class="display_flex_profile_prewiew_info2">
+            <button class="profile_prewiew_button" onclick="location.href='project_info.html'"><img src="{{ip.projects_post.pr.photo.url}}" class="project_logo"></button>
+            <div class="status_block">
+                <p class="id">id: {{ip.projects_post.pr.id}}</p>
+                <p class="project_block_nickname">{{ip.projects_post.pr.name}}</p>
+                <p class="date">{{ip.projects_post.pr.date_start}}</p>
+                <p class="date">{{ip.projects_post.pr.date_finish}}</p>
+            </div>
+        </div>
+        <p class="status_of_project_in_posts">Статус: <span class="yellow_span">Опубликованный</span></p>
+    </div>
+    </div>
+    <div class="box_shadow_in_info_text">
+        <div class="style_fix5">
+        <div class="style_fix">
+        <p class="addition_text_info">Информация о <span class="yellow_span">посте</span></p>
+        <p class="classic_info_text">Соцсети:
+            {%if ip.projects_post.pr.social_category == 'Instagram'%}
+                <img src="{% static 'image/social_logo.svg'%}" class="social_network_logo">
+            {%elif ip.projects_post.pr.social_category == 'Telegram'%}
+                <img src="{% static 'image/telegram.svg'%}" class="social_network_logo">
+            {%elif ip.projects_post.pr.social_category == 'VK'%}
+                <img src="{% static 'image/vk.svg'%}" class="social_network_logo">
+            {%elif ip.projects_post.pr.social_category == 'Youtube'%}
+                <img src="{% static 'image/youtube.svg'%}" class="social_network_logo">
+            {%endif%}
+        </p>
+        <p class="classic_info_text">Статус: <span class="info_text">{{ip.projects_post.pr.stat}}</span></p>
+        <p class="classic_info_text">Тип оплаты: <span class="info_text">{{ip.projects_post.pr.pay_category}}</span></p>
+        <p class="classic_info_text">Оплата: <span class="info_text">{{ip.projects_post.pr.pay}}</span></p>
+    </div>
+        <p class="manager_info_text">Менеджеры <span class="yellow_span">проекта</span></p>
+        <p class="managers_text"> Тихон Шкель: <span class="managers_text_info"> {{ip.projects_post.pr.us_manager.email}}</span></p>
+        <p class="managers_text"> Тихон Шкель: <span class="managers_text_info"> {{ip.projects_post.pr.men_email}}</span></p>
+    </div>
+    </div>
+    <div class="left_posts_block_box_shadows">
+        <div class="style_fix2">
+            {%for blog in ip.projects_post.blog.all%}
+        <div class="style_fix4">
+            <p class="addition_text_posts">Информация <span class="yellow_span">о блогере:</span></p>
+        <div class="display_flex_profile_prewiew2">
+            <button class="profile_prewiew_button" onclick="location.href='bloger_profile.html'"><img src="{{blog.photo_file.url}}" class="profile_logo_bloger"></button>
+            <div class="status_block">
+                <p class="id">id: {{blog.id}}</p>
+                <p class="project_block_nickname">{{blog.name_first}}</p>
+                <button class="button_report"><img src="{% static 'image/report.svg'%}"></button>
+                <button class="button_liked"><img src="{% static 'image/liked.svg'%}"></button>
+            </div>
+        </div>
+        </div>
+        <div class="style_fix3">
+        <div class="display_flex_social_text_bloggers">
+            <p class="social_text_bloggers1">Подписчики</p>
+        </div>
+        <div class="display_flex_status_bloggers2">
+            <p class="Yellow_projects_text">{{blog.subs}}</p>
+        </div>
+
+        <button class="redaction_post_button" id="open-add-blogers">Редактировать</button>
+    </div>
+            {%endfor%}
+    </div>
+    </div>
+    <div class="bloggers_post_info">
+        <p class="addition_text_posts">Информация <span class="yellow_span">о блогере:</span></p>
+        <p class="classic_post_text">Формат: <span class="yellow_span">{{ip.format}}</span></p>
+        <p class="classic_post_text">Планируемая дата: <span class="yellow_span">{{ip.date_nach}}</span></p>
+        <p class="classic_post_text">Фактическая дата: <span class="yellow_span">{{ip.data_konec}}</span></p>
+        <p class="classic_post_text">Ссылка на пост: <span class="yellow_span"><a href="{{ip.work_url}}">{{ip.work_url}}</a></span></p>
+    </div>
+</div>
+
+<div class="right_profile_block">
+<p class="addition_text_bloger_profile">Статистика <span class="yellow_span">поста</span></p>
+<div class="diplay_grid_statistics_block">
+    <div class="statistics_underblock">
+        <p class="type_of_stat">Проекты</p>
+        <p class="count_of_stat">{{ip.kol_p}}</p>
+    </div>
+    <div class="statistics_underblock">
+        <p class="type_of_stat">Посты</p>
+        <p class="count_of_stat">{{ip.kol_p}}</p>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+    </div>
+    <div class="modal_add" id="add-modal-block-blogers">
+        <div class="modal_box">
+            <form method="post">
+                {%csrf_token%}
+                <button class="esc" id="close-add-blogers"><img src="{% static 'image/cross.svg'%}"></button>
+                <p class="addition_text">Изменение<span class="yellow_span2">поста</span></p>
+                <div class="overflow_block_of_modal_box">
+                    <div>
+                      <p class="Status_in_modal_block_bloggers2">Формат</p>
+                      <div class="socials_input_theme">
+                          <input type="hidden" name="idd" value="{{ip.id}}">
+                            <input type="text" class="input_project_name" placeholder="Введите формат" name="format">
+                      </div>
+                      <div class="display_flex_date_input">
+                        <p class="date_text_modal_box_radius">Начало :</p>
+                        <input type="date" class="input_date" name="start_project">
+                    </div>
+                        <div class="display_flex_date_input">
+                        <p class="date_text_modal_box_radius">Конец:</p>
+                        <input type="date" class="input_date" name="finish_project">
+                    </div>
+
+                        <input type="url" placeholder="Введите ссылку на пост" class="input_project_name" name="url">
+
+                    </div>
+                    </div>
+                      <button class="button_submit" type="submit" id="commit-add-blogers">Подтвердить</button>
+                </form>
+            {%endfor%}
+        </div>
+    </div>
+    </div>
+</div>
+<script src="{% static 'js/error.js'%}"></script>
+{%if error%}
+    <p>{{error}}</p>
+{%endif%}
+</body>
+</html>
