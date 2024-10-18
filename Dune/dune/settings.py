@@ -19,7 +19,7 @@ ALLOWED_HOSTS = ['*']
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'Dune.affiliatenetwork2024@yandex.by'
-EMAIL_HOST_PASSWORD = "esuexwcfarsweygr"
+EMAIL_HOST_PASSWORD = "xgtgqpoqqgrhzase"
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
