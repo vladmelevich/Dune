@@ -19,8 +19,8 @@
 <div class="button_block_projects">
     <button class="button_on_projects_classic" onclick="location.href='{% url 'blogers'%}'"><img src="{% static 'image/blogers.png'%}"><p class="projects_classic_button_text">Блогеры</p></button>
     <button class="button_on_projects_classic" onclick="location.href='{% url 'projects'%}'"><img src="{% static 'image/grey_projects.png'%}"><p class="projects_classic_button_text" >Проекты</p></button>
-    <button class="button_on_projects_classic" onclick="location.href='project_m.html'"><img src="{% static 'image/Posts.png'%}"><p class="projects_classic_button_text">Посты</p></button>
-    <button class="button_on_projects_classic" onclick="location.href='profile_manager.html'"><img src="{% static 'image/statistics.png'%}"><p class="projects_classic_button_text">Результаты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'post'%}'"><img src="{% static 'image/Posts.png'%}"><p class="projects_classic_button_text">Посты</p></button>
+    <button class="button_on_projects_classic" onclick="location.href='{% url 'result_blog'%}'"><img src="{% static 'image/statistics.png'%}"><p class="projects_classic_button_text">Результаты</p></button>
     <button class="button_on_projects_classic" onclick="location.href='{% url 'applic_b'%}'"><img src="{% static 'image/Application.svg' %}"><p class="projects_classic_button_text">Заявки</p></button>
 </div>
 

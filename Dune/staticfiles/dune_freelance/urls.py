@@ -13,6 +13,7 @@ urlpatterns = [
     path('applications_m/', views.applications_m, name='applic_m'),
     path('blogers_manager', views.blogers_m, name='blogers_m'),
     path('bloger_info/<int:bloger_id>/', views.bloger_info, name= 'bloger_info'),
+    path('bloger_info_m/<int:bloger_id>/', views.bloger_info_m, name= 'bloger_info_m'),
     path('post', views.post, name='post'),
     path('posts_m', views.posts_m, name='post_m'),
     path('profile_manager', views.profile_manager, name='profile_manager'),

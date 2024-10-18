@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT dune.wsgi:application
+gunicorn --workers 2 dune.wsgi:application --bind 0.0.0.0:8000

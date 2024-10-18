@@ -260,12 +260,7 @@ def bloger_info(request, bloger_id):
         error = 'Возникла ошибка'
         return render(request, 'bloger_profile.html', {'error':error})
 
-    try:
-        app_cout = models.Applications.objects.get(blog = bloger_inf)
-    except:
-        error = 'Возникла ошибка'
-        return render(request, 'bloger_profile.html', {'error': error})
-    return render(request, 'bloger_profile.html', {'bloger_info':bloger_inf, 'app_cout':app_cout})
+    return render(request, 'bloger_profile.html', {'bloger_info':bloger_inf})
 
 
 @login_required()
@@ -282,6 +277,18 @@ def projects(request):
         error = 'Ошибка'
         return render(request, 'project.html', {'error':error})
     return render(request, 'project.html', {'projects_blog':projects_blog})
+
+@login_required()
+@user_passes_test(is_meneger)
+def bloger_info_m(request, bloger_id):
+    try:
+        bloger_inf_m = models.Bloger.objects.get(id=bloger_id)
+    except:
+        error = 'Возникла ошибка'
+        return render(request, 'bloger_profile_m.html', {'error':error})
+
+
+    return render(request, 'bloger_profile_m.html', {'bloger_info_m':bloger_inf_m})
 
 def projects_information(request,projects_id):
     try:
