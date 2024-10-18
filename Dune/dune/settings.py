@@ -14,12 +14,12 @@ SECRET_KEY = 'django-insecure-_qw%y+*@8&9i-sa9tski$(#d+4t2%8$608ls9c)o8h!k8qt1@(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['213.171.7.108']
+ALLOWED_HOSTS = ["213.171.7.108"]
 
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'Dune.affiliatenetwork2024@yandex.by'
-EMAIL_HOST_PASSWORD = "xgtgqpoqqgrhzase"
+EMAIL_HOST_PASSWORD = "mixeemrxzoeokzgl"
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
